@@ -22,7 +22,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 ]]
 
 print("Welcome to TAGET, the Text Adventure Game Engine Thingy");
-print("Copyright (c) 2013 Robert Cochran");
+print("Copyright (c) 2013 Robert Cochran and Isaac Almo");
 print("TAGET comes with ABSOLUTELY NO WARRANTY");
 print("This is free software, and you are welcome to redistribute it under certain conditions");
 print("See the LICENSE file for details");
@@ -65,7 +65,7 @@ taget.state.player = {
 	maxHealth = 10,
 	health = 10,
 	attack = 5,
-	defense = 5,
+	defense = 50,
 	level = 1,
 	experience = 0;
 	nextLevel = 25;

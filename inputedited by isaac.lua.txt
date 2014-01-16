@@ -284,91 +284,6 @@ B - The boss room
 ]]);
 end
 
-local function superHit()
-	taget.state.player.attack = taget.state.player.attack * 9001;
-	attack();
-	taget.state.player.attack = taget.state.player.attack / 9001;
-end
-
-local function chocolate()
-	print("Dr. Rileyford slaps thou repeatedly");
-end
-
-local function winner()
-	print("CHALLENGE EXCEPTED");
-	taget.state.player.attack = taget.state.player.attack * 500;
-	attack();
-	taget.state.player.attack = taget.state.player.attack / 500;
-end
-
-local function epicus()
-	taget.state.player.attack = taget.state.player.attack * 10000;
-	attack();
-	taget.state.player.attack = taget.state.player.attack / 10000;
-	print("STEALTH KILL")
-end
-
-local function arson()
-	print("These are your items:")
-	print("arm_weapon to equip, disarm_weapon to dequip")
-	print("sword")
-	print("spear")
-	print("dagger")
-end
-
-local function xmas()
-	print("BAH HUMBUG");
-end
-
-local function power()
-	taget.state.player.attack = taget.state.player.attack * 3;
-end
-
-local function power2()
-	attack()
-	taget.state.player.attack = taget.state.player.attack * 5;
-	attack();
-	taget.state.player.attack = taget.state.player.attack / 5;
-	attack();
-end
-
-local function unpower()
-	taget.state.player.attack = taget.state.player.attack / 3;
-end
-
-local function hi()
-	taget.state.player.attack = taget.state.player.attack * 2;
-end
-
-local function hi2()
-	attack();
-	attack();
-	attack();
-	attack();
-	attack();
-	attack();
-end 
-
-local function hi3()
-	taget.state.player.attack = taget.state.player.attack / 2;
-end
-
-local function thrust()
-	taget.state.player.attack = taget.state.player.attack * 4;
-end
-
-local function thrust2()
-	attack();
-	taget.state.player.attack = taget.state.player.attack / 4;
-	attack();
-	attack();
-	taget.state.player.attack = taget.state.player.attack * 4;
-end
-
-local function thrust3()
-	taget.state.player.attack = taget.state.player.attack / 4;
-end
-
 local verbToFunction = {
 	exit = handleExit,
 	quit = handleExit,
@@ -379,26 +294,8 @@ local verbToFunction = {
 	move = move,
 	look = look,
 	attack = attack,
-	hit = attack,
+	hit = attack, 	merry_christmas = attack, greet_pleasently = attack	
 	legend = legend,
-	weapons = arson,
-};
-
-local specialVerbToFunction = {
-	greet_pleasently = superHit,
-	imagine_chocolate = chocolate,
-	challenge_to_a_duel = winner,
-	assassinate = epicus,
-	merry_christmas_mr_scrooge = xmas,
-	arm_sword = power,
-	use_sword = power2,
-	disarm_sword = unpower,
-	arm_dagger = hi,
-	use_dagger = hi2,
-	disarm_dagger = hi3,
-	arm_spear = thrust,
-	use_spear = thrust2,
-	disarm_spear = thrust3,
 };
 
 function i.processInput()
@@ -414,8 +311,6 @@ function i.processInput()
 		end
 		
 		io.write("\n");
-	elseif specialVerbToFunction[input[1]] then
-		specialVerbToFunction[input[1]](input);
 	elseif verbToFunction[input[1]] then
 		verbToFunction[input[1]](input);
 	else
