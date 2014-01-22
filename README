@@ -1,11 +1,21 @@
+TAGET, the Text Adventure Game Engine Thingy, Copyright (C) Robert Cochran 2013
+TAGET comes with ABSOLUTELY NO WARRANTY!
+This is free software, and you are welcome to redistribute and modify it
+under cetain conditions, see the LICENSE file for details
+
 This project uses Lua, a very powerful and lightweight scripting language.
 Find it at http://www.lua.org/
+
+_NOTICE_ : This is the 'jimothy' branch, which was written by someone else
+who isn't a programmer. Some of the code isn't great. This branch also
+uses an older version of the master branch as a starting point.
 
 To start :
 
 Windows : drag 'main.lua' onto 'lua52.exe'
 
-Linux/Mac OS X : Use your own copy of Lua and run the 'main.lua' file
+Linux/Mac OS X : Use your own copy of Lua (at least 5.2)
+and run the 'main.lua' file
 
-Send any email related to TAGET to robert-software@cochranmail.com,
-and be sure to include 'TAGET' somewhere in the subject.
+Please do not send any email related to this branch of TAGET,
+as it is unsupported and only kept for archival purposes.
